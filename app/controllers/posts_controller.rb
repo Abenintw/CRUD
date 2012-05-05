@@ -35,6 +35,10 @@ def create
       format.json { render json: @post, status: :created, location: @post }
     else
       format.html { render action: "new" }
+      format.html{ jdjjfjdjdjdjdjifjsldkjfakld }
+
+
+
       format.json { render json: @post.errors, status: :nuprocessable_entity }
     end
   end
@@ -54,7 +58,7 @@ end
   end
 
     def destroy
-      @post= Post.find(params{:id})
+      @post= Post.find(params[:id])
       @post.destroy
       respond_to do |format|
         format.html { redirect_to posts_url }
